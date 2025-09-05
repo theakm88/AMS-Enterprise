@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMS Enterprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-primary: #7C3AED; /* violet-500 */
+        --color-primary-focus: #6D28D9; /* violet-600 */
+        --color-secondary: #0EA5E9; /* sky-500 */
+        --color-accent: #F59E0B; /* amber-500 */
+        --color-success: #22C55E; /* green-500 */
+        --color-danger: #EF4444; /* red-500 */
+        --color-background: #F8FAFC; /* slate-50 */
+        --color-surface: #FFFFFF;
+        --color-surface-hover: #F1F5F9; /* slate-100 */
+        --color-border: #E2E8F0; /* slate-200 */
+        --color-text-primary: #1E293B; /* slate-800 */
+        --color-text-secondary: #64748B; /* slate-500 */
+        --color-text-on-primary: #FFFFFF;
+      }
+      .dark {
+        --color-primary: #34D399; /* emerald-400 */
+        --color-primary-focus: #10B981; /* emerald-500 */
+        --color-secondary: #38BDF8; /* sky-400 */
+        --color-accent: #FBBF24; /* amber-400 */
+        --color-success: #34D399; /* emerald-400 */
+        --color-danger: #F87171; /* red-400 */
+        --color-background: #0F172A; /* slate-900 */
+        --color-surface: #1E293B; /* slate-800 */
+        --color-surface-hover: #334155; /* slate-700 */
+        --color-border: #334155; /* slate-700 */
+        --color-text-primary: #F1F5F9; /* slate-100 */
+        --color-text-secondary: #94A3B8; /* slate-400 */
+        --color-text-on-primary: #0F172A;
+      }
+      /* Recharts tooltip style */
+      .recharts-tooltip-wrapper {
+          outline: none !important;
+      }
+      .recharts-default-tooltip {
+          background: var(--color-surface) !important;
+          border-color: var(--color-border) !important;
+          border-radius: 0.5rem !important;
+      }
+      .recharts-tooltip-label {
+          color: var(--color-text-primary) !important;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': 'var(--color-primary)',
+              'primary-focus': 'var(--color-primary-focus)',
+              'secondary': 'var(--color-secondary)',
+              'accent': 'var(--color-accent)',
+              'success': 'var(--color-success)',
+              'danger': 'var(--color-danger)',
+              'background': 'var(--color-background)',
+              'surface': 'var(--color-surface)',
+              'surface-hover': 'var(--color-surface-hover)',
+              'border': 'var(--color-border)',
+              'text-primary': 'var(--color-text-primary)',
+              'text-secondary': 'var(--color-text-secondary)',
+              'text-on-primary': 'var(--color-text-on-primary)',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'slide-up': {
+                '0%': { transform: 'translateY(20px) scale(0.95)', opacity: '0' },
+                '100%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+              }
+            },
+            animation: {
+              'fade-in': 'fade-in 0.3s ease-out forwards',
+              'slide-up': 'slide-up 0.4s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2",
+    "recharts": "https://aistudiocdn.com/recharts@^3.1.2",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-text-secondary font-sans antialiased">
+    <div id="root"></div>
+  </body>
+</html>

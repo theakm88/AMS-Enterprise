@@ -1,0 +1,5 @@
+{
+  "name": "AMS Enterprise",
+  "description": "A CRM system for AMS Enterprise to manage collections from retailers in real-time. This is the Owner's dashboard for monitoring and management.",
+  "requestFramePermissions": []
+}
